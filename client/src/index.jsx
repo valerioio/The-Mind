@@ -1,8 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import "./index.css";
+import { io } from "socket.io-client";
 import { Root, Playground, WaitingRoom } from "./routes";
+import "./index.css";
+
+const socket = io("http://localhost:3000");
 
 const router = createBrowserRouter([
   {
