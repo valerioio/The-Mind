@@ -1,10 +1,14 @@
-export default function WaitingRoom() {
+export default function WaitingRoom({ socket, players }) {
   return (
     <>
       <h1>The Mind</h1>
-      <a href="playground">
-        <button>Start</button>
-      </a>
+
+      <ul>
+        {players.map((p, i) => (
+          <li key={i}>{p}</li>
+        ))}
+      </ul>
+      <button onClick={() => socket.emit("start-game")}>Start</button>
     </>
   );
 }

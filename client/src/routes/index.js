@@ -1,3 +1,3 @@
-export {default as Playground} from './playground';
-export {default as Root} from './root';
-export {default as WaitingRoom} from './waiting-room';
+export { default as Playground }  from "./playground";
+export { default as Home }        from "./home";
+export { default as WaitingRoom } from "./waiting-room";
